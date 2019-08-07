@@ -7058,10 +7058,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var app = (0, _express2.default)();
 
+app.use(_express2.default.static('public'));
+
 app.get('/', function (req, res) {
 
     var content = (0, _server.renderToString)(_react2.default.createElement(_Home2.default, null));
-    res.send(content);
+
+    var html = '\n<html>\n<head></head>\n<body>\n<div id ="root">' + content + '</div>\n<script src="bundle.js"></script>\n</body>\n\n</html>\n';
+
+    res.send(html);
 });
 
 app.listen(3000, function () {
@@ -22785,9 +22790,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Home = function Home() {
     return _react2.default.createElement(
-        'div',
+        "div",
         null,
-        'I am the new home component'
+        _react2.default.createElement(
+            "div",
+            null,
+            "I am the new home component"
+        ),
+        _react2.default.createElement(
+            "button",
+            { onClick: function onClick() {
+                    return console.log("i am clicked");
+                } },
+            "click me"
+        )
     );
 };
 
