@@ -35,4 +35,14 @@ return {users:state.users};
 
 }
 
+
+function loadData(store){
+  console.log("Im trying to load data")
+
+return store.dispatch(fetchUsers())
+
+}
+
+export {loadData}
+
 export default connect(mapStateToProps,{fetchUsers})(UsersList)
