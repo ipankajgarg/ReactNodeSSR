@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import Routes from "./Routes";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
+import axios from 'axios'
 import { Provider } from "react-redux";
 import {renderRoutes} from 'react-router-config'
 import reducers from './reducers'
@@ -13,7 +14,12 @@ import reducers from './reducers'
 
 //BrowserRoute doesn't work at server side because it has no address bar so it doesn't know about the routes
 
-const store = createStore(reducers, {}, applyMiddleware(thunk));
+const axiosInstance = axios.create({
+  baseURL:'/api'
+})
+
+
+const store = createStore(reducers, window.INITIAL_STATE, applyMiddleware(thunk.withExtraArgument(axiosInstance)));
 
 ReactDom.hydrate(
   <Provider store={store}>
