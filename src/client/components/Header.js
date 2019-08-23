@@ -11,15 +11,22 @@ const authButton = auth ?(
 
 
   return (
-    <div>
-      <Link to="/">React SSR</Link>
-      <div>
-
+    <nav>
+    <div className ="nav-wrapper" >
+      <Link to="/" className="brand-logo" >React SSR</Link>
+      <ul className ="right" >
+<li>
 <Link to="/users" >Users</Link>
+</li>
+<li>
 <Link to="/admins" >Admins</Link>
+</li>
+<li>
 {authButton}
-      </div>
+</li>
+      </ul>
     </div>
+    </nav>
   );
 };
 
