@@ -7,7 +7,8 @@
     "dev":"npm-run-all --parallel dev:*",
     "dev:server": "nodemon --watch build --exec \" node build/bundle.js\"",
     "dev:build-server": "webpack --config webpack.server.js --watch",
-    "dev:build-client":"webpack  --config webpack.client.js --watch "
+    "dev:build-client":"webpack  --config webpack.client.js --watch ",
+    "build": "webpack --config webpack.client.js"
   },
   "author": "",
   "license": "ISC",
@@ -28,8 +29,8 @@
     "lodash": "4.17.4",
     "nodemon": "1.12.0",
     "npm-run-all": "4.1.1",
-    "react": "16.0.0",
-    "react-dom": "16.0.0",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
     "react-helmet": "5.2.0",
     "react-redux": "5.0.6",
     "react-router-config": "1.0.0-beta.4",
