@@ -42,7 +42,7 @@ jobs:
     - name: Access Artifact
       uses: actions/download-artifact@v3
       with:
-      name: build-folder
+        name: build-folder
     - name: log artifacts
       run: ls
 
