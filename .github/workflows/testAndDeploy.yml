@@ -28,6 +28,11 @@ jobs:
       run: npm ci
     - name: Build
       run: npm run build
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-folder
+        path: build
     - name: deploy
       run: echo "Deploying...."
 
