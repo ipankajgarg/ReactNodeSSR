@@ -6,7 +6,7 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: random-address
-      MONGODB_USERNAME: random-username
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
       MONGODB_PASSWORD: random password
       PORT: 8080
     runs-on: ubuntu-latest
