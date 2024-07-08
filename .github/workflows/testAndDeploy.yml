@@ -4,6 +4,7 @@ env:
   MONGODB_DB_NAME: gha-demo
 jobs:
   test:
+    enviroment: testing #for using enviroment based secrets
     env:
       MONGODB_CLUSTER_ADDRESS: random-address
       MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
