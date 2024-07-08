@@ -24,8 +24,6 @@ jobs:
         node-version: 18
     - name: Install dependency
       run: npm ci
-    - name: start server
-      run: npm run dev & npx wait-on http://127.0.0.1:$PORT
     - name: Run Code
       run: node test.js
     - name: ouput variable
