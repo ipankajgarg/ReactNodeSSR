@@ -1,11 +1,11 @@
 name: 'Just trying some logs'
 on: workflow_dispatch
 jobs:
-    log:
-      runs-on: ubuntu-latest
-      steps:
-      - name: logging
-        run: git
+  log:
+    runs-on: ubuntu-latest
+    steps:
+    - name: logginh
+      run: git
 
 
 
