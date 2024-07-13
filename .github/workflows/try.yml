@@ -4,8 +4,8 @@ jobs:
   log:
     runs-on: ubuntu-latest
     steps:
-    - name: logginh
-      run: git
+    - name: logging
+      run: git branch
 
 
 
