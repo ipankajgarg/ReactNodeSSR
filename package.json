@@ -4,10 +4,10 @@
   "description": "Server side rendering project",
   "main": "index.js",
   "scripts": {
-    "dev":"npm-run-all --parallel dev:*",
+    "dev": "npm-run-all --parallel dev:*",
     "dev:server": "nodemon --watch build --exec \" node build/bundle.js\"",
     "dev:build-server": "webpack --config webpack.server.js --watch",
-    "dev:build-client":"webpack  --config webpack.client.js --watch ",
+    "dev:build-client": "webpack  --config webpack.client.js --watch ",
     "build": "webpack --config webpack.client.js"
   },
   "author": "",
@@ -24,6 +24,7 @@
     "babel-preset-stage-0": "6.24.1",
     "compression": "1.7.0",
     "concurrently": "3.5.0",
+    "cors": "^2.8.5",
     "express": "4.15.4",
     "express-http-proxy": "1.0.6",
     "lodash": "4.17.4",
