@@ -67,10 +67,11 @@ app.use(express.static("public"));
 
 
 app.get('/manifest',(req, res)=>{
-console.log("sending mpd")
-res.setHeader("Content-Type", "application/dash+xml");
+console.log("hello world log")
+ res.send("hello world")
+// res.setHeader("Content-Type", "application/dash+xml");
 
-  res.download('./public/manifest.mpd')
+//   res.download('./public/manifest.mpd')
 
 })
 const PORT = process.env.PORT || 5001
